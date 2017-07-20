@@ -1,0 +1,36 @@
+<form action="/write" method="POST">
+<div class="middle" id="mid">
+      <h1>Make Your Poster</h1>
+      
+      <div id="fancy-inputs">   <!--  input 창 -->
+        <label class="input">
+          <input type="text" name="title">
+          <span><span>Title</span></span>
+        </label>
+    
+        <label class="input">
+          <input type="text" name="detail">
+          <span><span>Detail</span></span>
+        </label>
+        
+        <label class="input">
+          <input type="text" name="address">
+          <span><span>Address</span></span>
+        </label>
+      </div> <!-- input 창 끝 -->
+      <!-- 파일 선택 창도 만들어줘야함 -->
+      
+      <button class="btn" type="submit">GO</button>  
+      <!--<a href="" class="btn">GO</a>-->
+</div>
+</form>
+
+<script>
+    $('#fancy-inputs input[type="text"]').blur(function(){
+      if($(this).val().length > 0){
+        $(this).addClass('white');
+      } else {
+        $(this).removeClass('white');
+      }
+    }); // input에 글자 들어가면 기존에 있던 title, detail 이런 글씨 없애주는거 javascript 기능
+</script>
