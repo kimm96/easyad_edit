@@ -15,4 +15,12 @@ class HomeController < ApplicationController
   def edit2
      @post = Post.find(params["id"]) #아이디값 받아오기
   end
+  
+  def edit_ajax
+    @post = Post.last
+  end
+  def new
+    Post.create(title: params[:title])
+    redirect_to :back
+  end
 end

@@ -5,7 +5,7 @@
     </header>
     
     <div class="input_form row">
-      <form action="/write" method="POST">
+      <form name="posterform">
         <div class="form-group"> <!-- form group은 한 줄 / for inline은 같은 줄 -->
           <label class="sr-only" for="title">Title</label>
           <input type="text" class="form-control" id="title" placeholder="Title" name="title">
@@ -29,17 +29,35 @@
   
   <div class="child poster">
     <div class="pt_content">
-      <h2>Title : </h2>
+      <h2>Title : <%= @post.title %> </h2>
     </div>
     <div>
-      <h4>Image</h4>
+      <h4>Image : 어휴 </h4>
     </div>    
     <div>
-      <h4>Detail : </h4>
+      <h4>Detail : <%= @post.detail %> </h4>
     </div>
     <div>
-      <h4>Address : </h4>
+      <h4>Address : <%= @post.address %> </h4>
     </div>
   </div>
   
 </div>
+
+
+<script>
+    $('#submit').click( function(){
+        alert('짠');
+        title_val = $('#title').val();
+        //alert(body_val);
+        $.ajax({
+          method: "POST",
+          url: "/home/new",
+          data: { title: title_val}
+        })
+        // .always(function( msg ) {
+        //     $('.comment').append(body_val+"<hr>");
+        //     $('#body').val('');
+        //   })
+    })
+</script>

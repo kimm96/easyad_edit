@@ -66,6 +66,12 @@ html body{
     font-size: 22px;
     position: relative;
     z-index: 99;
+    &:focus{
+    outline:none;
+    border: 0;
+    border: none;
+    border-bottom: 3px solid #fff;
+    }
   }
   .btn{
   border-radius: 4px;
