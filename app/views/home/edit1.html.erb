@@ -1,7 +1,7 @@
 <div class="parent">
   <div class="child">
     <header>
-      <h2>Make Your Poster</h2>
+      <h1>Make Your Poster</h1>
     </header>
     
     <div class="input_form row">
@@ -18,27 +18,25 @@
           <label class="sr-only" for="address">Address</label>
           <input type="text" class="form-control" id="address" placeholder="Address" name="address">
         </div>
-        
         <div class="form-group">
-          <label class="btn btn-default btn-file" for="image">
-            File input<input type="file" id="image" style="display: none;"> <!-- 인라인 사용해버렸따 -->
-          </label> 
-          <input type="text" class="form-control" readonly>
-          
-                  <!--<label class="btn btn-default btn-file">-->
-                  <!--    <span>-->
-                  <!--        File Input <input type="file" style="display: none;" multiple>-->
-                  <!--    </span>-->
-                  <!--</label>-->
-                  <!--<input type="text" class="form-control" readonly>-->
+          <label class="sr-only" for="image">Image</label>
+          <input type="file" class="fileinput" name="img" id="image">
         </div>
-        
-        <button type="submit" class="butn">Submit</button>
+        <button type="submit" class="btn">Submit</button>
       </form>
     </div>
   </div>
   
-  <div class="child img-thumbnail">
-    사진 예시
+  <div class="child poster">
+    <div class="pt_content">
+      <h2>Title : </h2>
+    </div>    
+    <div>
+      <h4>Detail : </h4>
+    </div>
+    <div>
+      <h4>Address : </h4>
+    </div>
   </div>
+  
 </div>
