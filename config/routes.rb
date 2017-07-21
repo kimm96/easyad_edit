@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  root 'home#edit1'
   get 'home/edit1'
   post '/write' => 'home#write'
   get '/edit2/:id' => 'home#edit2'

@@ -7,6 +7,7 @@ class HomeController < ApplicationController
     lion.title = params["title"]
     lion.detail = params["detail"]
     lion.address = params["address"]
+    lion.picture = params["picture"]
     lion.save
     redirect_to '/edit2/' + lion.id.to_s #따로 목록없음 걍 바로 보여주고 끝 (아이디값 이용)
   end
