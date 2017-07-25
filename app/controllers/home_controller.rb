@@ -23,4 +23,7 @@ class HomeController < ApplicationController
     Post.create(title: params[:title])
     redirect_to :back
   end
+  
+  def edit3
+  end
 end
