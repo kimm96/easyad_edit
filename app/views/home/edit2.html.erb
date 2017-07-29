@@ -27,7 +27,7 @@
         </div>
         <button type="submit" class="btn">Submit</button>
       </form>
-        <button class="btn">저장</button>       
+      
         
       <!--여기에 최종저장 버튼을 추가하고 이 버튼을 누르면 db생각-->
     </div>
@@ -48,19 +48,18 @@
         <h4><%= @post.address %> </h4>
       </div>
     </div>
+  <input id="btn-Preview-Image" type="button" value="이미지로 변환"/>  
+  <a id="btn-Convert-Html2Image" href="#">이미지 저장</a>
   </div>
   
 </div>
 
-    <input id="btn-Preview-Image" type="button" value="Preview"/>
-    <a id="btn-Convert-Html2Image" href="#">Download</a>
-    <br/>
-    <h3>Preview :</h3>
-    <div id="previewImage">
+    <h3>Preview :</h3> 
+    <div id="previewImage"> 
     </div>
     
 
-<!-- div 이미지로 변환 및 저장 -->
+<!-- div 이미지로 변환 및 저장 script-->
 <script>
 $(document).ready(function(){
 
