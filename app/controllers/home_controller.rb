@@ -10,6 +10,8 @@ class HomeController < ApplicationController
     lion.picture = params["picture"]
     lion.save
     redirect_to '/edit2/' + lion.id.to_s #따로 목록없음 걍 바로 보여주고 끝 (아이디값 이용)
+    
+    
   end
   
   def edit2
@@ -25,5 +27,11 @@ class HomeController < ApplicationController
   end
   
   def edit3
+  end
+  
+  def destroy
+    lion = Post.all  #all 말고 -1?로 해야하나
+    lion.destroy
+    redirect_to '/home/edit1'
   end
 end
