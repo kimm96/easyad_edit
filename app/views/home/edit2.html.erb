@@ -2,6 +2,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script>
 </head>
+
 <div class="parent">
   <div class="child">
     <header>
@@ -48,8 +49,8 @@
         <h4><%= @post.address %> </h4>
       </div>
     </div>
-  <input id="btn-Preview-Image" type="button" value="이미지로 변환"/>  
-  <a id="btn-Convert-Html2Image" href="#">이미지 저장</a>
+  <!--<input id="btn-Preview-Image" type="button" value="이미지로 변환"/>  -->
+  <a id="btn-Convert-Html2Image" href="#" >이미지 저장</a>
   </div>
   
 </div>
@@ -63,23 +64,28 @@
 <script>
 $(document).ready(function(){
 
-	
 var element = $("#html-content-holder"); // global variable
 var getCanvas; // global variable
  
-    $("#btn-Preview-Image").on('click', function () {
-         html2canvas(element, {
+    // $("#btn-Preview-Image").on('click', function () {
+      //이미지 변환
+      html2canvas(element, {
          onrendered: function (canvas) {
-                $("#previewImage").append(canvas);
+                $("#html_content_holder").append(canvas);
                 getCanvas = canvas;
              }
          });
-    });
+    // });
 
 	$("#btn-Convert-Html2Image").on('click', function () {
-    var imgageData = getCanvas.toDataURL("image/png");
+	  var imageData;
+	  var newData;
+	  
+
+      //이미지 저장
+    imageData   = getCanvas.toDataURL("image/png");
     // Now browser starts downloading it instead of just showing it
-    var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+    newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
     $("#btn-Convert-Html2Image").attr("download", "your_pic_name.png").attr("href", newData);
 	});
 
