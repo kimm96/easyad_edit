@@ -27,7 +27,7 @@
           <label class="sr-only" for="picture">Image</label>
           <input type="file" class="fileinput" name="picture" id="picture">
         </div>
-        <button type="submit" class="btn">Submit</button>
+        <button type="submit" class="btn-EditSubmit">Submit</button>
       </form>
       
         
@@ -56,26 +56,18 @@
   
 </div>
 
-    <!--<h3>Preview :</h3> -->
-    <!--<div id="previewImage"> -->
-    <!--</div>-->
-    
-
 <!-- div 이미지로 변환 및 저장 script-->
 <script>
 $(document).ready(function(){
 
 var element = $("#html-content-holder"); // global variable
 var getCanvas; // global variable
- 
-    // $("#btn-Preview-Image").on('click', function () {
       html2canvas(element, {
          onrendered: function (canvas) {
                 $("#html_content_holder").append(canvas);
                 getCanvas = canvas;
              }
          });
-    // });
 	$("#btn-Convert-Html2Image").on('click', function () {
     var imageData = getCanvas.toDataURL("image/png");
     // Now browser starts downloading it instead of just showing it
