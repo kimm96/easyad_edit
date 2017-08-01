@@ -3,13 +3,8 @@ Rails.application.routes.draw do
   #root 'home#edit1'
   get 'home/edit1'
   post '/write' => 'home#write'
-  get '/edit2/:id' => 'home#edit2'
-  
-  get 'home/edit_ajax'
-  
-  
-  get 'home/edit3'
-  get 'home/destroy'
+  get 'home/edit2/:id' => 'home#edit2'
+  get 'home/destroy/:id' => 'home#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

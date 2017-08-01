@@ -7,7 +7,7 @@
   <div class="child">
     <header>
       <h1>Make Your Poster</h1>
-      <input type="button" value="HOME" id="home">
+       <a href = "/home/destroy/<%=@post.id %>">×</a>
     </header>
     <div class="input_form row">
       <form action="/write" method="POST" enctype="multipart/form-data">
@@ -86,20 +86,20 @@ var getCanvas; // global variable
 </script>
 
 <!-- db / onclick 시, 날리기 -->
-<script>
-$(document).ready(function(){
-    $("#home").on('click', function () {
-        alert('ㅎㅇ');
-        // 2) databsae 여기서 직접 지우기 or 1) destroy controller으로 링크걸기
-            $.ajax({
-              url: "/home/delete",
-              type: 'DELETE',
-              success: function(result) {
-                window.location.href = '/home/edit1'; //홈창없으니 edit1으로 보내기
-                // Do something with the result
-              }
-            });
-    	});
-});
+<!--<script>-->
+<!--$(document).ready(function(){-->
+<!--    $("#btn-toHome").on('click', function () {-->
+<!--        alert('ㅎㅇ');-->
+        <!--// 2) databsae 여기서 직접 지우기 or 1) destroy controller으로 링크걸기-->
+<!--            $.ajax({-->
+<!--              url: "/home/destroy",-->
+<!--              type: 'DELETE',-->
+<!--              success: function(result) {-->
+                <!--window.location.href = '/home/edit1'; //홈창없으니 edit1으로 보내기-->
+                <!--// Do something with the result-->
+<!--              }-->
+<!--            });-->
+<!--    	});-->
+<!--});-->
 
-</script>
+<!--</script>-->
