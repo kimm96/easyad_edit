@@ -17,7 +17,7 @@ class HomeController < ApplicationController
   end
 
   def destroy
-    lion = Post.where(id: params["id-1"]).first #all 말고 -1?로 해야
+    lion = Post.where(id: params["id"]).first #all 말고 -1?로 해야
     lion.destroy
     redirect_to '/home/edit1'
   end
